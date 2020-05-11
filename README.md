@@ -24,3 +24,22 @@
 ## Recommendation:
   
   None of the Oversampling, Undersampling, or Combination models stood out in our comparison, either we should compare a different set of data or get more loan application data before figuring out which model might be our choice for predictions. For Predicting low-risk loans we could think of using SMOTE Oversampling which will be handy.
+
+
+## Extension:
+
+  Below table shows the accuracy score, precision, recall or sensitivity of the credit risk using the following models BalancedRandomForestClassifier, EasyEnsembleClassifier
+  
+  |Model Name                |   Bal. Accuracy Score  |   Precision         | Recall/Sensitivity | F1 Score
+  |--------------------------|:--------------------------:|:--------------------:|:-------------------:|:-------------|
+  |BalancedRandomForest Classifier  |     77%      | high risk - 3%   | high risk - 66%    | high risk - 6%    |      
+  |                          |              | low risk - 100%  |  low risk  - 90%   | low risk - 94%    |
+  |EasyEnsemble Classifier   |     92%      | high risk - 7%   | high risk - 91%    | high risk - 13%    |
+  |                          |              | low risk - 100%  |  low risk  - 93%   | low risk  - 97%   |
+  
+  Looking at the classifiers precision and F1 score for high risk loans which is pretty low in 7% and 13% respectively makes me to feel these classifiers may not be good for predicting the high risk loans. Also the Recall seems to be high for high risk so we might see lot of false positive in the predictions which will decrease the loan approval rate and the confidence of the applicant.
+
+## Recommendation:
+
+   None of the classifier is good for high risks loans based on unblanaced loan application data. 
+  
